@@ -81,7 +81,7 @@ python -m pytest tests/ -v
 - ✅ The full paid flow (402 parse → spend-cap check → sign → retry → settlement-header parse) is tested end-to-end against a mock server.
 - ✅ Free endpoints (catalogue) are tested live against production.
 - ✅ The 402 parsing uses BlockchainIQ's real, live `PAYMENT-REQUIRED` header.
-- ⚠️ **The live $0.01 paid call has NOT been executed by the author**: the author's wallet holds 0 USDC on Base, so no settlement transaction hash exists yet. The code path that sends the retry is the same one exercised by the mocked end-to-end test, and the signature it produces is proven identical to the official client's — but the final on-chain settlement can only be demonstrated by running it with $0.01 USDC. See `examples/dry_run.py --live` for the one-command way to do that.
+- ✅ **The live $0.01 paid call HAS been executed (2026-11-11):** the `brief` resource was bought for $0.01 USDC on Base. Settlement tx `0x36a56a875f9eab3d8722d371bbf951842799b6daccb8dc331ca8982192f15599` (block 56078491, status success), payer `0xf5a2c0B6415665828f4f9F5C6a0b1017D8261915`, facilitator submitted the EIP-3009 authorization gaslessly. The payment was signed through the Binance Agentic Wallet's native x402 support (`baw x402-payment preview` + `sign`) rather than this repo's `--live` path, because the agentic wallet never exposes a raw private key — the authorization it signs is the same EIP-3009 authorization this client builds (and the Python signer is proven byte-identical to the official `@x402/fetch` library).
 
 ## Bounty claim
 

@@ -25,9 +25,13 @@
 > official @x402/fetch library.
 >
 > Settlement transaction hash (paid `brief` call, $0.01 USDC on Base):
-> [TX HASH — run the paid call first; see README "Honest status"]
+> 0x36a56a875f9eab3d8722d371bbf951842799b6daccb8dc331ca8982192f15599
+> (Base, block 56078491, status success — verified on-chain; payer
+> 0xf5a2c0B6415665828f4f9F5C6a0b1017D8261915, facilitator submitted the
+> EIP-3009 authorization gaslessly)
 >
-> Payout address (USDC on Base): [WALLET THAT MADE THE PAID CALL]
+> Payout address (USDC on Base):
+> 0xf5a2c0B6415665828f4f9F5C6a0b1017D8261915
 >
 > Thanks,
 > xlapt.ai
@@ -38,11 +42,14 @@
   published** — `gh` is not logged in on this machine. Publish it (e.g.
   `git remote add origin <url> && git push -u origin main`) and paste the
   URL above.
-- **No settlement tx hash exists yet.** The author's wallet holds 0 USDC on
-  Base, so the live $0.01 paid call has not been made. Fund the calling
-  wallet with $0.01 USDC on Base, run
-  `AGENT_PRIVATE_KEY=0x... python examples/dry_run.py --live`, and paste
-  the printed settlement transaction hash above. Settlement is gasless for
-  the payer — only the $0.01 USDC is needed, no ETH.
-- Do not send this email until the repo URL and the tx hash are filled in:
-  the bounty requires both, and a failed claim goes to the back of the line.
+- ✅ **Settlement tx hash EXISTS (2026-11-11 ~21:10 WIB).** The paid `brief`
+  call was executed: 0.000024 ETH swapped to 0.049414 USDC on Base, then
+  the $0.01 USDC payment was signed and settled via the Binance Agentic
+  Wallet's native x402 support (`baw x402-payment preview` + `sign`) —
+  the agentic wallet never exposes a raw private key, so the Python
+  client's `--live` path (which needs `AGENT_PRIVATE_KEY`) was not used;
+  the payment itself is the same EIP-3009 authorization the Python client
+  builds. Settlement tx verified on-chain (status 1, block 56078491).
+- Do not send this email until the repo URL is filled in: the bounty
+  requires both the repo link and the tx hash, and a failed claim goes to
+  the back of the line.
