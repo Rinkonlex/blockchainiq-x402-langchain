@@ -1,0 +1,4 @@
+langchain-core>=0.3
+eth-account>=0.13
+requests>=2.31
+pytest>=8

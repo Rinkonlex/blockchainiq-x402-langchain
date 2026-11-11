@@ -1,0 +1,16 @@
+{
+  "authorization": {
+    "from": "0x7f225583E3bCE24E0DEaA116EcFF1E552Cb74272",
+    "to": "0x617dA9383fbA67e86137BC4924b8b7E400fB7C9e",
+    "value": "10000",
+    "validAfter": "0",
+    "validBefore": "1794405317",
+    "nonce": "0x5e515af67c3abf76e8e4e654784e37b944c77cd3c6a29797e7a29d25e426246b"
+  },
+  "signature": "0x485696b5dd06cff4f51c8b94a0712cc1496f510ad19645fdc3f50d1df160598976328449211a5c56cc9096c096108a7589b335416560c80409423680389f5a2d1c",
+  "private_key": "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f3ff80",
+  "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "chain_id": 8453,
+  "token_name": "USD Coin",
+  "token_version": "2"
+}
