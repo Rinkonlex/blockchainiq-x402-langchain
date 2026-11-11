@@ -7,8 +7,7 @@
 >
 > Claiming the LangChain slot of the x402 build bounties.
 >
-> Repository: [REPO URL — publish this repo to GitHub first, e.g.
-> https://github.com/Rinkonlex/blockchainiq-x402-langchain]
+> Repository: https://github.com/Rinkonlex/blockchainiq-x402-langchain
 >
 > What it is: a LangChain tool (`BlockchainIQTool`) that buys Blockchain IQ
 > data via x402 v2 on Base — plain GET, HTTP 402, local EIP-3009 USDC
@@ -38,10 +37,12 @@
 
 ## Status of this draft
 
-- Repo is built and tested locally (18/18 tests pass) but **not yet
-  published** — `gh` is not logged in on this machine. Publish it (e.g.
-  `git remote add origin <url> && git push -u origin main`) and paste the
-  URL above.
+- ✅ **Repo PUBLISHED 2026-11-11 ~21:26 WIB:**
+  https://github.com/Rinkonlex/blockchainiq-x402-langchain (public, all
+  21 files, HEAD 6c18abb). Pushed by the agent with a one-time
+  fine-grained token the user supplied in chat (scoped to this repo only);
+  token was used transiently, never stored — user should revoke it now
+  that the push is done.
 - ✅ **Settlement tx hash EXISTS (2026-11-11 ~21:10 WIB).** The paid `brief`
   call was executed: 0.000024 ETH swapped to 0.049414 USDC on Base, then
   the $0.01 USDC payment was signed and settled via the Binance Agentic
